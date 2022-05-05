@@ -10,6 +10,15 @@ const worldElem = document.querySelector("[data-world]")
 const scoreElem = document.querySelector("[data-score]")
 const startScreenElem = document.querySelector("[data-start-screen]")
 
+import { updateDino, setupDino } from "./dino.js"
+const WORLD_WIDTH=100
+const WORLD_HEIGHT=30
+const SPEED_SCALE_INCREASE=0.00001
+var score
+const worldElem=document.querySelector('[data-world]')
+const scoreElem=document.querySelector('[data-score]')
+
+
 setPixelToWorldScale()
 window.addEventListener("resize", setPixelToWorldScale)
 document.addEventListener("keydown", handleStart, { once: true })
@@ -40,6 +49,11 @@ function checkLose() {
   const dinoRect = getDinoRect()
   return getCactusRects().some(rect => isCollision(rect, dinoRect))
 }
+const delta= time - lastTime
+updateGround(delta,1)
+updateDino(delta,1)
+console.log(delta)
+lastTime=time
 
 function isCollision(rect1, rect2) {
   return (
@@ -50,8 +64,17 @@ function isCollision(rect1, rect2) {
   )
 }
 
+
 function updateSpeedScale(delta) {
   speedScale += delta * SPEED_SCALE_INCREASE
+window.requestAnimationFrame(update)
+let speedScale
+function handleStart(){
+    lastTime=null
+    speedScale=1
+    setupGround()
+    setupDino()
+    window.requestAnimationFrame(update)
 }
 
 function updateScore(delta) {
