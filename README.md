@@ -1,2 +1,1 @@
-# Godzilla
-recreation of the chrome Dinosaur game
+# Godzilla is a recreation of the chrome Dinosaur game
