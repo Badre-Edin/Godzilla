@@ -1,0 +1,33 @@
+body{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFotHE8ofv6Ay6qEgVKpdCfQOPTYrYlM32LQ&usqp=CAU");
+    background-attachment: fixed;
+ background-repeat: no-repeat;
+ background-position: center;
+ justify-content: center;
+ background-size: 100%;
+ 
+}
+.but{
+    
+        display: flex;
+       align-items: center;
+       background-color: rgb(255, 0, 123);
+       justify-content: center;
+       width: 24rem;
+       height: 3.3rem;
+       border-radius: 10vw;
+       font-size: 1rem;
+       text-decoration: none;
+       font-weight: 700;
+margin: auto;
+margin-top: 400px;
+       
+   
+   
+}
+.but:hover{
+    background-color: rgb(0, 255, 38);
+    color:rgb(9, 8, 9);
+    cursor: pointer;
+    
+}

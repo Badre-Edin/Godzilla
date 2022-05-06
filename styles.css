@@ -1,58 +1,85 @@
 *, *::before, *::after {
     box-sizing: border-box;
     user-select: none;
-}
-body {
-    background-image: url(https://media.istockphoto.com/vectors/path-along-spruce-forest-game-background-vector-id1249102727?k=20&m=1249102727&s=170667a&w=0&h=PSA6RPJSjQ44F6QUqdcrEjD4hcdWWgcb6Kq5zqEgFGg=);
-    background-repeat: no-repeat ;
-    background-attachment: local;
-    background-size: cover;
+  }
+  
+  body {
+    background-image: url(https://thumbs.dreamstime.com/b/forest-game-background-application-vector-design-tileable-horizontally-parallax-effect-76618481.jpg);
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-}
-.world {
+    min-height: 100vmin;
+
+  }
+  
+  .world {
     overflow: hidden;
     position: relative;
-   
-}
-.score {
-    position: absolute;
-    font-size: 3vmin;
-    right: 1vmin;
-    top: 1vmin;
-}
-.start-screen {
+  }
+  
+  .score {
+    color: brown;
+    position: fixed;
+    font-size: 10vmin;
+    right: 102vmin;
+    top: 0vmin;
+  }
+  
+  .start-screen {
+    color: maroon;
     position: absolute;
     font-size: 5vmin;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-.hide {
+  }
+  
+  .hide {
     display: none;
-}
-.ground {
+  }
+  
+  .ground {
     --left: 0;
-    position: absolute;
+    position: fixed;
     width: 300%;
     bottom: 0;
     left: calc(var(--left) * 1%)
-}
-.dino {
+  }
+  
+  .dino {
     --bottom: 0;
-    position: absolute;
+    position: fixed;
     left: 1%;
-    height: 30%;
+    height: 20%;
     bottom: calc(var(--bottom) * 1%);
-}
-.cactus {
-    position: absolute;
+  }
+  
+  .cactus {
+    position: fixed;
     left: calc(var(--left) * 1%);
-    height: 30%;
+    height: 20%;
     bottom: 0;
+    
+  }
+  .but{
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 0, 123);
+    justify-content: center;
+    width: 24rem;
+    height: 3.3rem;
+    border-radius: 10vw;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 700;
+margin: auto;
+    
+
+
 }
-  
-  
+  .but:hover{
+    background-color: rgb(0, 255, 38);
+    color:rgb(9, 8, 9);
+    cursor: pointer;
+  }
